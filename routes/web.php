@@ -14,4 +14,13 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+    Route::get('/sucursal', function () {
+        return view('sucursal');
+    })->name('sucursal');
+    Route::get('/horario', function () {
+        return view('horario');
+    })->name('horario');
+    Route::get('/cita', function () {
+        return view('cita');
+    })->name('cita');
 });

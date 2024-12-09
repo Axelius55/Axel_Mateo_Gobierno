@@ -9,6 +9,8 @@ class Horario extends Model
 {
     use HasFactory;
 
+    protected $table = 'horarios';
+
     protected $fillable = ['sucursal_id', 'fecha', 'hora_inicio', 'hora_fin', 'disponible'];
 
     public function sucursal()

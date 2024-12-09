@@ -9,8 +9,8 @@ return new class extends Migration {
     {
         Schema::create('citas', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained()->onDelete('cascade');
-            $table->foreignId('horario_id')->constrained()->onDelete('cascade');
+            $table->foreignId('user_id')->constrained('users', 'id')->onDelete('cascade');
+            $table->foreignId('horario_id')->constrained('horarios', 'id')->onDelete('cascade');
             $table->string('descripcion')->nullable();
             $table->enum('estado', ['pendiente', 'confirmada', 'cancelada'])->default('pendiente');
             $table->timestamps();

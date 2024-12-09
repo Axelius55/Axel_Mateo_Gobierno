@@ -3,13 +3,14 @@
     <input wire:model.live='buscador' type="text" class="form-control ml-4 rounded-lg" placeholder="Busqueda">
 
     <x-button class="mt-4 mb-4 ml-4" wire:click="set('mAdd', true)">Agregar Sucursal</x-button>
+    
     @if ($mAdd)
     <div class="z-50 bg-gray-800 bg-opacity-25 fixed inset-0 flex items-center justify-center">
         <div class="bg-white dark:bg-gray-900 rounded-lg shadow-lg max-w-lg w-full p-6">
             <div class="py-12">
                 <div class="bg-white shadow rounded-lg p-6">
                     <form class="max-w-sm mx-auto" wire:submit='enviar'>
-                        <div class="mb-4"><span>Crear nuevo cliente:</span></div>
+                        <div class="mb-4"><span>Crear nueva sucursal:</span></div>
                         <div></div>
 
                         <x-label for="nombre" value="Nombre"/>
@@ -21,7 +22,7 @@
                         <x-label for="telefono" value="Telefono" />
                         <x-input name="telefono" wire:model='telefono' type="number"/><br>
 
-                        <x-button wire:click="set('mAdd', false)"class="mt-2">Guardar</x-button>
+                        <x-button wire:click="set('mAdd', false)" class="mt-2">Guardar</x-button>
                         <x-danger-button class="mt-2" wire:click="set('mAdd', false)">Cancelar</x-danger-button>
                     </form>
                 </div>
